@@ -1,0 +1,108 @@
+@fallback_font: "sans-serif";
+@signature_font: "Herr Von Muellerhoff";
+//@signature_text: "Aiste Beloglovyte Photography";
+@nav_font: "Raleway";
+@std_margin: 20px;
+
+.home {
+    
+    .home-inner,
+    .home-body {
+
+    }
+    
+    .home-inner {
+        background-image: url("../images/header-pic1.jpg");
+        background-repeat: no-repeat;
+    //    background-attachment: fixed;
+        background-size: cover;
+        background-position: 80% 40%;
+        background-color: transparent;
+
+//        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        
+        .home-body {
+//            width: 100%;
+            min-height: 100vh;
+//            display: block;
+//            top: 0;
+//            left: 0;
+            position: relative;
+            
+            
+            .home-body-top {
+                display: flex;
+                margin: @std_margin 1.5% 0 1.5%;
+                justify-content: space-between;
+                align-items: center;
+
+                .home-body-top-left,
+                .home-body-top-right {
+                    flex: 1 0 auto;
+                }
+                
+                .home-body-top-left {
+                    
+                    .signature {
+                        font-family: @signature_font, @fallback_font;
+                        font-size: 30px;
+                        width: 100%;
+                    }
+                }
+
+                .home-body-top-right {
+                    text-align: right;
+                    
+                    ul {
+                        font-size: 0;
+                    
+                        li {
+                            display: inline-block;
+                            font-size: 13px;
+                            
+                            &:not(:first-child) {
+                                
+                                a {
+                                    margin-left: 20px;
+                                }
+                            }
+
+                            a {
+                                font-family: @nav_font, @fallback_font;
+                                font-weight: 600;
+                                font-style: normal;
+                                font-size: 1em;
+                                text-transform: uppercase;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+
+                
+            }
+            
+            .home-body-bottom {
+                bottom: 0;
+                left: 50%;
+                width: 100%;
+                text-align: center;
+                position: absolute;
+                transform: translate(-50%, 50%);
+                margin: 0 0 @std_margin 0;
+                
+                ul {
+                    padding: 0 0;
+                    
+                    li {
+                    display: inline-block;
+                    } 
+                } 
+            }
+        }       
+    }
+}
