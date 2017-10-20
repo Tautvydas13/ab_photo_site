@@ -11,9 +11,20 @@
             list-style: none;
             padding: 0 15%;
 
-            .albums-grid-col {
-                flex: 1;
+            a img {
+                object-fit: cover;
+                min-height: 100%;
+                min-width: 100%;
+                display: block;
+//                Kad uzpildytu tobulai pilnai:
+//                    -vietoj <img> daryti <div>, i ji talpinti background image
+//                    -nuoroda i elementa palikti inline-style
+//                    -kitus background-... parametrus aprasyti css
             }
+        }
+        .albums-grid-col {
+            flex: 1;
+            flex-basis: 25%;
         }
     }
     
@@ -33,4 +44,16 @@
     color: white;
 }
 
+@media only screen and (max-width: 768px) {
+    .albums .albums-grid .albums-grid-col {
+        flex: 1;
+        flex-basis: 33%;
+    }
+}
 
+@media only screen and (max-width: 540px) {
+    .albums .albums-grid .albums-grid-col {
+        flex: 1;
+        flex-basis: 50%;
+    }
+}
