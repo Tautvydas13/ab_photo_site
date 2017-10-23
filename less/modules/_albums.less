@@ -1,7 +1,42 @@
 .albums {
+    min-height: 100vh;
+    padding: 0 15%;
+    
+    .albums-categories {
+        padding: 5% 0;
+        
+        .type-work {
+            display: block;
+            text-align: center;
+            padding-bottom: 2%;
+            font-family: "Raleway", sans-serif;
+            font-size: 1.5em;
+            text-transform: uppercase;
+        }
+    
+        ul {
+            padding: 0 0;
+            display: flex;
+            justify-content: space-around;
 
+//            li.type-work {
+//                font-family: "Raleway", sans-serif;
+//                font-size: 1.5em;
+//                text-transform: uppercase;
+//            }
+            
+            li {
+                display: inline;
+                
+
+                a {
+                    color: #303030;
+                }
+            }
+        }
+    }
     .albums-grid {
-        margin-bottom: 8%;
+        margin-bottom: 5%;
         
         .albums-grid-row {
             display: flex;
@@ -9,12 +44,12 @@
             flex-wrap: wrap;
             justify-content: space-between;
             list-style: none;
-            padding: 0 15%;
+            padding: 0 0;
+            
 
             a img {
                 object-fit: cover;
-                min-height: 100%;
-                min-width: 100%;
+                max-width: 33vh;
                 display: block;
 //                Kad uzpildytu tobulai pilnai:
 //                    -vietoj <img> daryti <div>, i ji talpinti background image
@@ -22,9 +57,11 @@
 //                    -kitus background-... parametrus aprasyti css
             }
         }
-        .albums-grid-col {
+        .albums-item {
             flex: 1;
-            flex-basis: 25%;
+            flex-basis: 33%;
+            padding: 0.3em;
+            
         }
     }
     
@@ -46,15 +83,15 @@
 }
 
 @media only screen and (max-width: 768px) {
-    .albums .albums-grid .albums-grid-col {
-        flex: 1;
-        flex-basis: 33%;
-    }
-}
-
-@media only screen and (max-width: 540px) {
-    .albums .albums-grid .albums-grid-col {
+    .albums .albums-grid .albums-item {
         flex: 1;
         flex-basis: 50%;
     }
 }
+
+//@media only screen and (max-width: 540px) {
+//    .albums .albums-grid .albums-item {
+//        flex: 1;
+//        flex-basis: 50%;
+//    }
+//}

@@ -1,44 +1,48 @@
 .services {
-    padding: 8% 15%;
+    min-height: 100vh;
+    padding: 8% 0;
     
-    .services-body {
+    .services-body-upper {
         display: flex;
+        padding: 0 15%;
+        padding-bottom: 8%;
         
-        .services-body-img,
-        .services-body-text {
+        .services-body-upper-img,
+        .services-body-upper-article {
             flex: 1;
         }
         
-        .services-body-img {
+        .services-body-upper-img {
             position: relative;
         }
         
-        img {
+        .services-img1 {
             max-height: 160px;
             right: 10%;
             position: absolute;
         }
         
-        h2 {
-            font-family: "Playfair Display", @fallback_font;
-            font-weight: normal;
-            font-style: italic;
-            font-size: 30px;
-            letter-spacing: 2.5px;
-            margin-top: 0;
-            margin-bottom: 1em;
-            color: #303030;
+        .services-body-upper-article p {
+            padding-bottom: 1.5em;
+        }
+    }
+    
+    .services-body-lower-topic {
+        text-align: center;
+    }
+    
+    .services-body-lower {
+        display: flex;
+        padding-left: 15%;
+        padding-bottom: 8%;
+        
+        .services-body-lower-article {
+            flex: 35
         }
         
-        p {
-            font-family: "Raleway", @fallback_font;
-            font-weight: 500;
-            font-style: normal;
-            font-size: 12px;
-            letter-spacing: 1px;
-            margin: 0 0;
-            color: #303030;
-            margin-bottom: 2em;
+        .services-body-lower-img {
+            flex: 50;
         }
+        
     }
 }

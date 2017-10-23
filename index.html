@@ -8,6 +8,18 @@
     <meta name="description" content="photography wedding beloglovyte">
     <link rel="stylesheet" href="css/styles.css" type="text/css">
     
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!--jQuery-->
+    <script src="http://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    
+    <!-- Bootstrap CSS -->
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
+
+    <!-- Bootstrap JavaScript -->
+<!--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>-->
+    
     <title>Aistė Beloglovytė Photography</title>
     
 </head>
@@ -17,7 +29,7 @@
     <div class="wrapper">
         
         <!--Home-->
-        <section class="home">
+        <section id="home" class="home">
             <div class="home-inner">
                 <div class="home-body">
                     <div class="home-body-top">
@@ -26,11 +38,11 @@
                         </div>
                         <nav class="home-body-top-right">
                             <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">About me</a></li>
-                                <li><a href="#">My services</a></li>
+                                <li><a href="#home">Home</a></li>
+                                <li><a href="#aboutme">About me</a></li>
+                                <li><a href="#albums">Albums</a></li>
+                                <li><a href="#services">My services</a></li>
                                 <li><a href="#">Contact</a></li>
-                                <li><a href="#"><span class="icon-search"></span></a></li>
                             </ul>
                         </nav>
                     </div>
@@ -47,7 +59,7 @@
         </section>
         
         <!--About Me-->
-        <section class="aboutme">
+        <section id="aboutme" class="aboutme">
             
             <div class="aboutme-person">
             
@@ -67,11 +79,11 @@
             </div>
             <div class="aboutme-icons">
             
-                <ul>
-                    <li><a href="#"><span class="icon-facebook"></span></a></li>
-                    <li><a href="#"><span class="icon-twitter"></span></a></li>
-                    <li><a href="#"><span class="icon-google"></span></a></li>
-                    <li><a href="#"><span class="icon-pinterest2"></span></a></li>
+                <ul class="icons-ul">
+                    <li><a href="#"><div class="ring"><span class="fa fa-facebook"></span></div></a></li>
+                    <li><a href="#"><div class="ring"><span class="fa fa-instagram"></span></div></a></li>
+                    <li><a href="#"><div class="ring"><span class="fa fa-google-plus"></span></div></a></li>
+                    <li><a href="#"><div class="ring"><span class="fa fa-pinterest-p"></span></div></a></li>
                 </ul>
             
             </div>
@@ -79,60 +91,72 @@
         </section>
         
         <!--Albums-->
-        <section class="albums">
-            <div class="albums-grid">
-                
+        <section id="albums" class="albums">
+            
+            <div class="albums-categories">
+                <span class="type-work">Type of Work</span>
+                <nav id="iso-options" class="albums-nav">
+                    <ul id="iso-filter" class="iso-filter" data-option-key="filter">
+<!--                        <li class="type-work">Type of Work</li>-->
+                        <li><a href="#filter" data-option-value="*" class="selected">All projects</a></li>
+                        <li><a href="#filter" data-option-value=".portrait">Portrait</a></li>
+                        <li><a href="#filter" data-option-value=".abstract">Abstract</a></li>
+                        <li><a href="#filter" data-option-value=".special">Special Moments</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <div id="projects" class="albums-grid">
                 <ul class="albums-grid-row">
-                    <li class="albums-grid-col">
+                    <li class="albums-item portrait">
                         <a href="#"><img src="images/portfolio-grid-pic1.jpg" alt="img"></a>
                     </li>
-                    <li class="albums-grid-col">
+                    <li class="albums-item abstract">
                         <a href="#"><img src="images/portfolio-grid-pic2.jpg" alt="img"></a>
                     </li>
-                    <li class="albums-grid-col">
+                    <li class="albums-item abstract">
                         <a href="#"><img src="images/portfolio-grid-pic3.jpg" alt="img"></a>
                     </li>
-                    <li class="albums-grid-col">
+                    <li class="albums-item portrait">
                         <a href="#"><img src="images/portfolio-grid-pic4.jpg" alt="img"></a>
                     </li>
-                    <li class="albums-grid-col">
+                    <li class="albums-item abstract">
                         <a href="#"><img src="images/portfolio-grid-pic5.jpg" alt="img"></a>
                     </li>
-                    <li class="albums-grid-col">
+                    <li class="albums-item portrait">
                         <a href="#"><img src="images/portfolio-grid-pic6.jpg" alt="img"></a>
                     </li>
-                    <li class="albums-grid-col">
+                    <li class="albums-item special">
                         <a href="#"><img src="images/portfolio-grid-pic7.jpg" alt="img"></a>
                     </li>
-                    <li class="albums-grid-col">
+                    <li class="albums-item special">
                         <a href="#"><img src="images/portfolio-grid-pic8.jpg" alt="img"></a>
                     </li>
-                    <li class="albums-grid-col">
+                    <li class="albums-item portrait">
                         <a href="#"><img src="images/portfolio-grid-pic9.jpg" alt="img"></a>
                     </li>
-                    <li class="albums-grid-col">
+                    <li class="albums-item portrait">
                         <a href="#"><img src="images/portfolio-grid-pic10.jpg" alt="img"></a>
                     </li>
-                    <li class="albums-grid-col">
+                    <li class="albums-item special">
                         <a href="#"><img src="images/portfolio-grid-pic11.jpg" alt="img"></a>
                     </li>
-                    <li class="albums-grid-col">
+                    <li class="albums-item portrait">
                         <a href="#"><img src="images/portfolio-grid-pic12.jpg" alt="img"></a>
                     </li>
-                    <li class="albums-grid-col">
+                    <li class="albums-item portrait">
                         <a href="#"><img src="images/portfolio-grid-pic13.jpg" alt="img"></a>
                     </li>
-                    <li class="albums-grid-col">
+                    <li class="albums-item portrait">
                         <a href="#"><img src="images/portfolio-grid-pic14.jpg" alt="img"></a>
                     </li>
-                    <li class="albums-grid-col">
+                    <li class="albums-item portrait">
                         <a href="#"><img src="images/portfolio-grid-pic15.jpg" alt="img"></a>
                     </li>
-                    <li class="albums-grid-col">
+                    <li class="albums-item special">
                         <a href="#"><img src="images/portfolio-grid-pic16.jpg" alt="img"></a>
                     </li>
                 </ul>
-                
             </div>
             
             <div class="albums-viewall">
@@ -143,29 +167,44 @@
         </section>
         
         <!--Services-->
-        <section class="services">
+        <section id="services" class="services">
             
-            <div class="services-body">
-            
-                <div class="services-body-img">
-                    <img src="images/flowers.jpg" alt="img">
+            <div class="services-body-upper">
+                <div class="services-body-upper-img">
+                    <img src="images/flowers.jpg" alt="img" class="services-img1">
                 </div>
-                <div class="services-body-text">
-                
+                <div class="services-body-upper-article">
                     <article>
                         <h2>Best Photographer</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id tempor eros. Morbi nisi turpis, auctor vel faucibus id, fringilla.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed diam elementum, iaculis nulla ac, eleifend orci. Sed sed sem et augue interdum pharetra.</p>
+                        <p>Quisque justo mi, varius eu felis eget, tincidunt fermentum arcu. Fusce pulvinar enim vel sem facilisis.</p>
                         <a href="#"><input type="submit" value="READ MORE" class="button button-readmore"></a>
                     </article>
-                
                 </div>
+            </div>
             
+            <div class="services-body-lower-topic">
+                <h2>Our philosophy</h2>
+            </div>
+            
+            <div class="services-body-lower">
+                <div class="services-body-lower-article">
+                    <article>
+                        <h2>Best solution for any event</h2>
+                        <p>Aliquam faucibus pulvinar mauris ut scelerisque. In hac habitasse platea dictumst. Nulla tempus ligula ex, at aliquet nisl sodales vel. Nulla metus arcu, hendrerit ut vehicula sed, vulputate sed leo. Aenean nec mollis ante. Nam vitae mauris ex. Donec eu sem lorem. Aliquam ultrices aliquet nibh vitae porttitor. Mauris felis orci, imperdiet ut sagittis non, venenatis vitae quam.</p>
+                        <p>Fusce tempor finibus orci quis iaculis. Suspendisse tincidunt mi velit, in pulvinar ligula gravida in. Suspendisse porttitor magna turpis, a rutrum orci pellentesque non.</p>
+                        <a href="#"><input type="submit" value="READ MORE" class="button button-readmore"></a>
+                    </article>
+                </div>
+                <div class="services-body-lower-img">
+                    <img src="images/body-pic.jpg" alt="img" class="service-img2">
+                </div>
             </div>
             
         </section>
         
         <!--Footer-->
-        <section class="footer">
+        <section id="footer" class="footer">
             
             <div class="footer-wrapper">
             
@@ -179,11 +218,11 @@
 
                 <div class="footer-icons">
 
-                    <ul>
-                        <li><a href="#"><span class="icon-facebook"></span></a></li>
-                        <li><a href="#"><span class="icon-twitter"></span></a></li>
-                        <li><a href="#"><span class="icon-google"></span></a></li>
-                        <li><a href="#"><span class="icon-pinterest2"></span></a></li>
+                    <ul class="icons-ul">
+                        <li><a href="#"><div class="ring"><span class="fa fa-facebook"></span></div></a></li>
+                        <li><a href="#"><div class="ring"><span class="fa fa-instagram"></span></div></a></li>
+                        <li><a href="#"><div class="ring"><span class="fa fa-google-plus"></span></div></a></li>
+                        <li><a href="#"><div class="ring"><span class="fa fa-pinterest-p"></span></div></a></li>
                     </ul>
 
                 </div>
@@ -197,6 +236,9 @@
             
         </section>
     </div>
+    
+    <script src="_files/js/isotope.pkgd.min.js"></script> <!-- Isotope Filter -->
+    <script src="_files/js/main.js" type="text/javascript"></script>
     
 </body>
 

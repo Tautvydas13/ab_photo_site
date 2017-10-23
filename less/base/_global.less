@@ -1,0 +1,87 @@
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+    
+//    dev
+//    border: 1px dotted #949599;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+ul {
+    margin: 0 0;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+html, 
+body {
+    font-family: "Raleway", Arial, serif;
+}
+
+.icons-ul {
+    font-size: 1.5em;
+    padding: 0 0;
+
+    li {
+        display: inline-block;
+
+        .ring {
+            width: 2em;
+            height: 2em;
+            border-radius: 50%;
+            border: 1px solid #000;
+            display: inline-table;
+            text-align: center;
+
+            span {
+                vertical-align: middle;
+                display: table-cell;
+                color: #515151;
+            }
+        }
+    }
+}
+
+.signature {
+    font-family: @signature_font, @fallback_font;
+    font-size: 2em;
+    width: 100%;
+    color: #fff;
+}
+
+h2 {
+    font-family: "Playfair Display", sans-serif;
+    font-weight: normal;
+    font-style: italic;
+    font-size: 1.5em;
+    letter-spacing: 2.5px;
+    margin-top: 0;
+    margin-bottom: 1.875em;
+    color: #303030;
+
+}   
+        
+p {
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 0.75em;
+    letter-spacing: 1px;
+    margin: 0 0;
+    color: #515151;
+}
