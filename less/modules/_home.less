@@ -1,86 +1,28 @@
 @fallback_font: "sans-serif";
 @signature_font: "Herr Von Muellerhoff";
-//@signature_text: "Aiste Beloglovyte Photography";
 @nav_font: "Raleway";
 @std_margin: 20px;
 
 .home {
     
-    .home-inner,
-    .home-body {
-
-    }
-    
     .home-inner {
         background-image: url("../images/header-pic1.jpg");
         background-repeat: no-repeat;
-    //    background-attachment: fixed;
         background-size: cover;
         background-position: 80% 40%;
         background-color: transparent;
+        transition: background-image 1s ease-in;
 
-//        position: absolute;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
         
         .home-body {
-//            width: 100%;
             min-height: 100vh;
-//            display: block;
-//            top: 0;
-//            left: 0;
             position: relative;
-            
-            
-            .home-body-top {
-                display: flex;
-                padding: 3% 1.5% 0 1.5%;
-                justify-content: space-between;
-                align-items: center;
-
-                .home-body-top-left,
-                .home-body-top-right {
-                    flex: 1 0 auto;
-                }
-                
-                .home-body-top-left {
-                    
-                    
-                }
-
-                .home-body-top-right {
-                    text-align: right;
-                    
-                    ul {
-                        font-size: 0;
-                    
-                        li {
-                            display: inline-block;
-                            font-size: 13px;
-                            
-                            &:not(:first-child) {
-                                
-                                a {
-                                    margin-left: 20px;
-                                }
-                            }
-
-                            a {
-                                font-family: @nav_font, @fallback_font;
-                                font-weight: 600;
-                                font-style: normal;
-                                font-size: 1em;
-                                text-transform: uppercase;
-                                color: #fff;
-                            }
-                        }
-                    }
-                }
-
-                
-            }
+            padding-top: 20px;
+            padding-left: 15px;
             
             .home-body-bottom {
                 bottom: 0;
@@ -93,12 +35,57 @@
                 
                 ul {
                     padding: 0 0;
+                    display: inline-block;
+                    padding: 5px 5px;
+                    background-color: rgba(34, 34, 34, 0.5);
                     
                     li {
-                    display: inline-block;
-                    } 
+                        display: inline-block;
+                        
+                        button {
+                            background-color: transparent;
+                            border: none;
+                            font-size: 1.3em;
+                            color: white;
+                            padding-left: 1px;
+                            padding-right: 1px;
+                        }
+                        
+                        button.active-toggle-button {
+                            fill: white;
+                        }
+                    }
+                    
+                    .toggle-control {
+                        display: inline;
+                        padding-left: 1.3em;
+                    }
                 } 
             }
         }       
     }
+}
+
+
+//Overwrite Bootstrap CSS
+#home nav .navbar-nav a {
+    font-family: @nav_font, @fallback_font;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1em;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.navbar-inverse {
+    background-color: rgba(34, 34, 34, 0.5);
+    border: none;
+}
+
+#home .navbar-header {
+    transform: translateY(5px);
+}
+
+#home .signature {
+    font-size: 2.2em;
 }

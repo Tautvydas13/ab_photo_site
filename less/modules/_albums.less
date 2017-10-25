@@ -1,36 +1,39 @@
 .albums {
     min-height: 100vh;
-    padding: 0 15%;
+    padding: 1% 15%;
     
     .albums-categories {
         padding: 5% 0;
         
         .type-work {
-            display: block;
-            text-align: center;
-            padding-bottom: 2%;
-            font-family: "Raleway", sans-serif;
-            font-size: 1.5em;
-            text-transform: uppercase;
+            
         }
     
         ul {
             padding: 0 0;
             display: flex;
-            justify-content: space-around;
-
-//            li.type-work {
-//                font-family: "Raleway", sans-serif;
-//                font-size: 1.5em;
-//                text-transform: uppercase;
-//            }
+            text-align: center;
             
             li {
                 display: inline;
+                flex: 1 0 25%;
                 
 
                 a {
                     color: #303030;
+                    font-weight: 600;
+                    transition-property: color, letter-spacing;
+                    transition-duration: 0.15s, 0.15s;
+                }
+                
+                a:hover {
+                    color: deepskyblue;
+                    letter-spacing: 1.5px;
+                }
+                
+                a.selected {
+                    color: deepskyblue;
+                    letter-spacing: 3px;
                 }
             }
         }

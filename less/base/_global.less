@@ -9,28 +9,30 @@
 //    border: 1px dotted #949599;
 }
 
-a {
-    text-decoration: none;
-    color: white;
-}
+.wrapper {
+    
+    a {
+        text-decoration: none;
+        color: white;
+    }
+    
+    ul {
+        margin: 0 0;
+    }
 
-ul {
-    margin: 0 0;
-}
-
-li {
-    list-style: none;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-
-html, 
-body {
-    font-family: "Raleway", Arial, serif;
+    li {
+        list-style: none;
+    }
+    
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    html, body {
+        font-family: "Raleway", Arial, serif;
+    }
+    
 }
 
 .icons-ul {
@@ -40,13 +42,20 @@ body {
     li {
         display: inline-block;
 
+        .ring:hover {
+            border: 1px solid gainsboro;
+            background-color: gainsboro;
+        }
+        
         .ring {
             width: 2em;
             height: 2em;
             border-radius: 50%;
-            border: 1px solid #000;
+            border: 1px solid #303030;
             display: inline-table;
             text-align: center;
+            transition-property: border, background-color;
+            transition-duration: 0.15s, 0.15s;
 
             span {
                 vertical-align: middle;
@@ -65,16 +74,34 @@ body {
 }
 
 h2 {
+    font-family: "Raleway", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2.5em;
+    
+    display: block;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 2%;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    
+    color: #303030;
+} 
+
+h3 {
     font-family: "Playfair Display", sans-serif;
     font-weight: normal;
-    font-style: italic;
+    font-style: normal;
     font-size: 1.5em;
-    letter-spacing: 2.5px;
+    
     margin-top: 0;
-    margin-bottom: 1.875em;
+    margin-bottom: 0;
+    padding-bottom: 1em;
+    
     color: #303030;
-
-}   
+}
         
 p {
     font-family: "Raleway", sans-serif;
@@ -84,4 +111,26 @@ p {
     letter-spacing: 1px;
     margin: 0 0;
     color: #515151;
+}
+
+//hr separator style
+hr.dash_dot_dash {
+    overflow: visible; /* For IE */
+    padding: 0;
+    border: none;
+    border-top: 1px solid gainsboro;
+    color: gainsboro;
+    text-align: center;
+    width: 130px;
+    padding-bottom: 2em;
+}
+hr.dash_dot_dash:after {
+    content: '<>';
+    display: inline-block;
+    position: relative;
+    top: -0.8em;
+    font-size: 1.3em;
+    padding: 0 0.6em;
+    background: white;
+    letter-spacing: -1px;
 }

@@ -1,2 +1,1 @@
-Dummy text here
-More text here
+Personal professional photography website
